@@ -33,15 +33,11 @@ if (!fs.existsSync(uploadDir)) {
 mongoose.connect(`${process.env.DATABASE}`, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
-}).then(() =>
-     console.log('MongoDB connected')
-    )
-    .catch(err => console.log(err));
+})
 
 // Routes
 app.use('/api/users', userRoutes); // Mount user routes under /api/users
 
 // Start server
 app.listen(port, () => {
-    // console.log(port);
 });
