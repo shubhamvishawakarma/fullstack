@@ -33,9 +33,7 @@ if (!fs.existsSync(uploadDir)) {
 const connectDB = async () => {
     try {
         await mongoose.connect(process.env.DATABASE);
-        // console.log('MongoDB connected');
     } catch (err) {
-        // console.error(err);
     }
 };
 
@@ -46,5 +44,4 @@ app.use('/api/users', userRoutes); // Mount user routes under /api/users
 
 // Start server
 app.listen(port, () => {
-    // console.log(port);
 });
