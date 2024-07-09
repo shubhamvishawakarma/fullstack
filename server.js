@@ -18,7 +18,7 @@ app.use(cors());
 // Serve static files from the uploads directory
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
-const port = process.env.PORT
+const port = process.env.BASE_URL || 4000
 // const dbUri = process.env.DB_URI;
 // const uploadsDir = process.env.UPLOADS_DIR;
 
