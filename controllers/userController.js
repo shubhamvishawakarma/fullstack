@@ -1,15 +1,11 @@
 const User = require('../models/User'); // Make sure the path is correct
-
 // category images store 
 const Category = require('../models/Category');
 const multer = require('multer');
 const path = require('path');
 
 exports.signup = async (req, res) => {
-
-
     const { username, email, password } = req.body;
-
     // Check if all required fields are provided
     if (!username || !email || !password) {
         return res.status(400).json({ result: false, message: 'username, email, and password are required' });
