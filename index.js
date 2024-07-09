@@ -30,7 +30,7 @@ if (!fs.existsSync(uploadDir)) {
 }
 
 // Mongoose connect
-mongoose.connect('mongodb+srv://shubham:shubham902980@cluster0.7uep38v.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0', {
+mongoose.connect(`${process.env.DATABASE}`, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
 }).then(() => console.log('MongoDB connected'))
